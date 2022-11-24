@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤라</title>
+    <!-- 파비콘 -->
+    <link rel="icon" href="./02이미지/favicon.ico" type="image/x-icon">
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <!-- 레이아웃 -->
+    <link rel="stylesheet" href="./css/layout.css" type="text/css">
+    <!-- 메인 -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- 베이스 -->
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <!--아이콘폰트-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 스와이퍼슬라이드 서식 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" type="text/css">
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    <!-- 부드러운 애니메이션 스크립트 소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <!-- 스크롤 탑을 위한 스크립트 소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 스크롤 동작에 따른 애니메이션 스크립트 소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    
+    <!-- 메인스크립트 -->
+    <script src="./script/main.js" defer></script>
+
+
+</head>
+<body style="overflow-x: hidden">
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="index.html" title="로고">
+                    <img src="./image/logo.svg" alt="">
+                </a>
+            </h1>
+            <div class="lnb">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass search_btn"></i>
+                        <input type="text" id="glass" placeholder="검색어를 입력하세요">
+                    </li>
+                    <li><a href="javascript:void(0);" title="매장찾기"><i class="fa-solid fa-location-dot"></i></a></li>
+                    <li><a href="login.html" title="로그인"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </div>
+
+            <nav class="gnb">
+            <ul >
+                <li><a href="javascript:void(0);" title="헤라스토리">헤라스토리</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub sub1">
+                            <dt><a href="#story" title="">브랜드소개</a></dt>
+                            <dt><a href="#acrew" title="">에어쿠르</a></dt>
+                            <dt><a href="#library" title="">캠페인 라이브러리</a></dt>
+                            <dd>&nbsp;</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#makeup" title="">메이크업</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">페이스</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">파운데이션</a></dd>
+                            <dd><a href="javascript:void(0);" title="">쿠션</a></dd>
+                            <dd><a href="javascript:void(0);" title="">베이스/프라이머</a></dd>
+                            <dd><a href="javascript:void(0);" title="">파우더/픽서</a></dd>
+                            <dd><a href="javascript:void(0);" title="">컨실러</a></dd>
+                            <dd><a href="javascript:void(0);" title="">브러쉬/어플리케이터</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">립</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">립스틱</a></dd>
+                            <dd><a href="javascript:void(0);" title="">틴트/글로스</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">아이</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아이섀도</a></dd>
+                            <dd><a href="javascript:void(0);" title="">마스카라</a></dd>
+                            <dd><a href="javascript:void(0);" title="">이이브로우</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아이라이너</a></dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#skin" title="">스킨케어</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품 라인</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 라인</a></dd>
+                            <dd><a href="javascript:void(0);" title="">셀 사이언스</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아쿠아볼릭</a></dd>
+                            <dd><a href="javascript:void(0);" title="">에이지 어웨이</a></dd>
+                            <dd><a href="javascript:void(0);" title="">시그니아</a></dd>
+                            <dd><a href="javascript:void(0);" title="">UV프로텍터</a></dd>
+                            <dd><a href="javascript:void(0);" title="">클렌징</a></dd>
+                            <dd><a href="javascript:void(0);" title="">옴므</a></dd>
+                            <dd><a href="javascript:void(0);" title="">하이드로-듀 플럼핑</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">피부고민</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 라인</a></dd>
+                            <dd><a href="javascript:void(0);" title="">수분/보습</a></dd>
+                            <dd><a href="javascript:void(0);" title="">브라이트닝</a></dd>
+                            <dd><a href="javascript:void(0);" title="">피부보호/차단</a></dd>
+                            <dd><a href="javascript:void(0);" title="">안티에이징</a></dd>
+                            <dd><a href="javascript:void(0);" title="">프리미엄 안티에이징</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품유형</a></dt>
+                            <dd><a href="javascript:void(0);" title="">스킨</a></dd>
+                            <dd><a href="javascript:void(0);" title="">로션</a></dd>
+                            <dd><a href="javascript:void(0);" title="">에센스/앰플</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아이 케어</a></dd>
+                            <dd><a href="javascript:void(0);" title="">크림</a></dd>
+                            <dd><a href="javascript:void(0);" title="">마스크/스페셜케어</a></dd>
+                            <dd><a href="javascript:void(0);" title="">클렌징</a></dd>
+                            <dd><a href="javascript:void(0);" title="">프로텍션</a></dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#fragrance" title="">프래그런스</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품 라인</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">익셉셔널</a></dd>
+                            <dd><a href="javascript:void(0);" title="">지일/벨벳 나이트</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품유형</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">향수</a></dd>
+                            <dd><a href="javascript:void(0);" title="">바디</a></dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#hera" title="">#HERA</a></li>
+            </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <!-- 메인영역 -->
+    <main>
+        <!-- 메인슬라이드 -->
+        <section class="main_slide">
+            <h2>.</h2>
+            <h2>메인슬라이드</h2>
+            <div class="swiper m_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="m_slide_txt_l">
+                        <span>아침부터 저녁까지 매끈한 피부결</span>
+                        <span>실키 스테이 파운데이션</span>
+                        <div class="btn_box">
+                            <a href="javascript:voide(0);" title="더보기" class="view_btn black">viewmore ></a>
+                        </div>
+                    </div>
+                    <a href="javascript:voide(0);" title="이미지1">
+                        <img src="./image/mainslide(1).jpg" alt="">
+                    </a>
+                </div>
+                    <div class="swiper-slide">
+                    <div class="m_slide_txt_l">
+                        <span>내 피부처럼 가벼운 벨벳티 스킨</span>
+                        <span>블랙 쿠션</span>
+                        <div class="btn_box">
+                            <a href="javascript:voide(0);" title="더보기" class="view_btn black">viewmore ></a>
+                        </div>
+                    </div>
+                    <a href="javascript:voide(0);" title="이미지2">
+                        <img src="./image/mainslide(2).jpg" alt="">
+                    </a>
+                </div>
+                    <div class="swiper-slide">
+                    <div class="m_slide_txt_r">
+                        <span>뛰어난 지속력의 소프트 블러 벨벳 립</span>
+                        <span>센슈얼 파우더 매트 리퀴드</span>
+                        <div class="btn_box">
+                            <a href="javascript:voide(0);" title="더보기" class="view_btn black">viewmore ></a>
+                        </div>
+                    </div>
+                    <a href="javascript:voide(0);" title="이미지3">
+                        <img src="./image/mainslide(3).jpg" alt="">
+                    </a>
+                </div>
+                    <div class="swiper-slide">
+                    <div class="m_slide_txt_l">
+                        <span>세상에 없던 NEW COMFORT MLBB</span>
+                        <span>센슈얼 파우더 매트 립스틱</span>
+                        <div class="btn_box">
+                            <a href="javascript:voide(0);" title="더보기" class="view_btn black">viewmore ></a>
+                        </div>
+                    </div>
+                    <a href="javascript:voide(0);" title="이미지4">
+                        <img src="./image/mainslide(4).jpg" alt="">
+                    </a>
+                </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                </div>
+                
+        </section>
+
+        <!-- BEST&NEW -->
+        <section class="bestnew">
+            <h2>.</h2>
+            <h2>BEST/NEW</h2>
+            <div class="swiper bestnew_sldie">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                    <img src="./image/best.jpg" alt="">
+                    <div class="text_box">실키 스테이 24H 롱웨어 파운데이션 SPF 20 / PA++</div>
+                    <div class="btn_box">
+                        <a href="javascript:voide(0);" title="" class="view_btn">viewmore ></a>
+                    </div>
+                </div>
+
+                    <div class="swiper-slide">
+                    <img src="./image/new.jpg" alt="">
+                    <div class="text_box">센슈얼 피팅 글로우 틴트</div>
+                    <div class="btn_box">
+                        <a href="javascript:voide(0);" title="" class="view_btn">viewmore ></a>
+                    </div>
+                </div>
+
+                    <div class="swiper-slide">
+                    <img src="./image/best.png" alt="">
+                    <div class="text_box">센슈얼 파우더 매트 리퀴드</div>
+                    <div class="btn_box">
+                        <a href="javascript:voide(0);" title="" class="view_btn">viewmore ></a>
+                    </div>
+                </div>
+
+                    <div class="swiper-slide">
+                    <img src="./image/new.png" alt="">
+                    <div class="text_box">헤라 UV프로텍터 톤업 SPF50+ / PA++++</div>
+                    <div class="btn_box">
+                        <a href="javascript:voide(0);" title="" class="view_btn">viewmore ></a>
+                    </div>
+                </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                </div>
+        </section>
+
+        <!--띠배너 -->
+        <section class="band_banner">
+            <h2>.</h2>
+        </section>
+
+        <!-- 라이브러리 -->
+        <section class="library" id="library">
+            <h2>.</h2>
+            <h2>캠페인 라이브러리</h2>
+            <video src="./image/hera_kv_20210517_pc_1.mp4" muted autoplay loop></video>
+
+            <div class="library_box">
+            <ul>
+                <li>
+                <div class="img_box">
+                    <img src="./image/library(2).jpg" alt="">
+                </div>
+                <div class="text_box">
+                    JOY OF LIFE
+                </div>
+                </li>
+                <li>
+                <div class="img_box">
+                    <img src="./image/library(9).jpg" alt="">
+                </div>
+                <div class="text_box">
+                    BLACK CUSHION X MVP
+                </div>
+                </li>
+                <li>
+                <div class="img_box">
+                    <img src="./image/library(1).jpg" alt="">
+                </div>
+                <div class="text_box">
+                    COMPONENTS OF SEOUL SCAPE
+                </div>
+                </li>
+            </ul>
+            </div>
+            <div class="btn_box">
+                <a href="javascript:voide(0);" title="" class="view_btn">viewmore ></a>
+            </div>
+        </section>
+        <!-- 제품 1 메이크업-->
+        <section class="makeup scroll-spy" id="makeup">
+            <h2>.</h2>
+            <div class="makeup_box">
+                <div class="text_box back-to-position to-right delay-1">
+                    <span>NEW SENSUAL POWDER MATTE LIPSTICK</span>
+                    <span>마치 내 입술인 듯 편안한 컴포트 MLBB</span>
+                </div>
+                <div class="btn_box back-to-position to-right delay-2">
+                    <a href="javascript:voide(0);" title="" class="view_btn black">viewmore ></a>
+                </div>
+                <div class="swiper-button-next back-to-position to-left delay-3"></div>
+            </div>
+
+            <div class="swiper makeup_slide back-to-position to-left delay-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./image/makeup(1).jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/makeup(2).jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/makeup(3).jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/makeup(4).jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./image/makeup(5).jpg" alt=""></div>
+                </div>
+                </div>
+                
+        </section>
+        <!-- 제품 2 스킨-->
+        <section class="skin scroll-spy" id="skin">
+            <h2>.</h2>
+            <div class="skin_box ">
+                <div class="back-to-position to-left delay-3">
+                <img src="./image/skincare(5).jpg" alt="" >
+                </div>
+                <div class="text_box back-to-position to-right delay-1">
+                    <span>NEW SENSUAL POWDER MATTE LIPSTICK</span>
+                    <span>마치 내 입술인 듯 편안한 컴포트 MLBB</span>
+                </div>
+                <div class="btn_box back-to-position to-right delay-2">
+                    <a href="javascript:voide(0);" title="" class="view_btn white">viewmore ></a>
+                </div>
+            </div>
+        </section>
+        <!-- 제품 3 프래그런스-->
+        <section class="fragrance scroll-spy" id="fragrance">
+            <h2>.</h2>
+            <div class="fragrance_box">
+                <img src="./image/fragrance(1).jpg" alt="" class="back-to-position to-right delay-3">
+                <div class="text_box back-to-position to-left delay-1">
+                    <span>익셉셔널 오 드 퍼퓸</span>
+                    <span>아시아 여성의 특별한 아름다움, 그 특별한 순간의 이야기를 담은 향</span>
+                </div>
+                <div class="btn_box back-to-position to-left delay-2">
+                    <a href="javascript:voide(0);" title="" class="view_btn black">viewmore ></a>
+                </div>
+            </div>
+        </section>
+        <!-- 헤라스토리 -->
+        <section class="story scroll-spy" id="story">
+            <h2>.</h2>
+            <div class="text_box">
+                <span class="back-to-position to-left delay-1">HERE <br>
+                    NOW <br>
+                    MYSELF</span>
+                <span class="back-to-position to-left delay-2">CONTEMPORARY SEOUL BEAUTY</span>
+                <span class="back-to-position to-left delay-3">헤라는 가장 최신의 아름다움을 정의하고 <br>
+                    창조해나가는 브랜드로 한국 여성의 아름다움과 <br>
+                    가치를 세계 속에 전파하는 <br>
+                    럭셔리 컨템포러리 서울 뷰티 브랜드입니다.</span>
+            </div>
+            <div class="btn_box back-to-position to-left delay-3">
+                <a href="javascript:voide(0);" title="" class="view_btn white">viewmore ></a>
+            </div>
+        </section>
+        <!-- 에이크루 -->
+        <section class="acrew scroll-spy" id="acrew">
+            <h2>.</h2>
+            <div class="text_box">
+                <span class="back-to-position delay-3">지금, 서울에서, 가장 나다운,</span>
+                <span class="back-to-position delay-1">HERE. NOW. MYSELF</span>
+            </div>
+        </section>
+        <!-- #hera -->
+        <section class="sns" id="hera">
+            <h2>.</h2>
+            <h2>#HERA</h2>
+            <p>Share your #HERA moments!</p>
+            <div class="sns_layout">
+                <article class="sns1">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(1).jpg" alt="">
+                    <span class="text_box">
+                        <span>@chenie_rvw</span>
+                        <span>HERA Sensual Spicy Nude Gloss💕 #내돈내산 저 헤라 덕후인거 알 분들은 다 아실거에요🥺 이번에 헤라 누드 글로스에 신규홋수 추가된거 아시나용😭!! [439 no hustle / 35,000 / 맑고 고급스러운 살몬 베이지 컬러] 이번 발색샷은 단독은 아니고 팜파스랑 같이 사용해줬는데요! 이 조합... 정말 대대대대찬성입니다....🖤 고급짐이 두 배가 되는 매직✨ 헤라 글로스는 처음 써봤는데 바르면 아주 약간의 플럼핑 효과와 함께 싸한 느낌이 올라오더라구요 처음에 좀 당황스러웠는데 바르다보면 익숙해지는 정도의 감각이에요! 매트만 고집했던 사람인데 왠지모르게 요즘 계속 글로스립이 눈에 들어오더라구요. 헤라 신규홋수 추가됐다는 말에 아묻따 구입완료 🤣 유리 패키지도 제품이랑 넘 잘어울리고 색감부터 네이밍까지 완벽한 것 같아요..😭 헤라 더 흥해라🖤 herabeauty_official #노허슬 #스파이시누드글로스 #헤라 #hera</span>
+                    </span>
+                </article>
+                
+                <article class="sns2">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(5).jpg" alt="">
+                    <span class="text_box">
+                        <span>@sokssang_lip</span>
+                        <span>#헤라 #헤라센슈얼틴트 . . -헤라 센슈얼 틴트 (416 서틀베이지) 요번에 센슈얼 뉴 컬러가 나왔길래 집에 있던 센슈얼 생각이 나서 발랐는데 맨날 마스크만 쓰고 다녀서 화장을 잘 안하는데 입술은 뭔가 바르고 싶은데 많이 티나는건 싫을때 손이 많이 가더라구여!! 색상이 살짝 차분한 코랄??</span>
+                    </span>
+                </article>
+                
+                <article class="sns3">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(7).jpg" alt="">
+                    <span class="text_box">
+                        <span>@makeupbyelliechoi</span>
+                        <span>한국와서 제일 많이 산 브랜드는? 헤라에요! 그중에서 지금 잘쓰는 친구들 뽑아봤어요. 다 이쁜데 여러분.. 블러셔 꼭 사세요 🙋🏻‍♀️🙋🏻‍♀️🙋🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️ 1. herabeauty_official #란제리 2. 센슈얼 스파이시 누드밤 #카시스 3. #카시스 발색 4. 헤라 실키스테이 롱웨어 파운데이션 5. #실키스테이롱웨어 6. 디자이닝 블러셔 #이터널핑크</span>
+                    </span>
+                </article>
+                
+                <article class="sns4">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(4).jpg" alt="">
+                    <span class="text_box">
+                        <span>@zzin_beautylog
+                        </span>
+                        <span>HERA Sensual Spicy Nude Gloss💕 #내돈내산 저 헤라 덕후인거 알 분들은 다 아실거에요🥺 이번에 헤라 누드 글로스에 신규홋수 추가된거 아시나용😭!! [439 no hustle / 35,000 / 맑고 고급스러운 살몬 베이지 컬러] 이번 발색샷은 단독은 아니고 팜파스랑 같이 사용해줬는데요! 이 조합... 정말 대대대대찬성입니다....🖤 고급짐이 두 배가 되는 매직✨ 헤라 글로스는 처음 써봤는데 바르면 아주 약간의 플럼핑 효과와 함께 싸한 느낌이 올라오더라구요 처음에 좀 당황스러웠는데 바르다보면 익숙해지는 정도의 감각이에요! 매트만 고집했던 사람인데 왠지모르게 요즘 계속 글로스립이 눈에 들어오더라구요. 헤라 신규홋수 추가됐다는 말에 아묻따 구입완료 🤣 유리 패키지도 제품이랑 넘 잘어울리고 색감부터 네이밍까지 완벽한 것 같아요..😭 헤라 더 흥해라🖤 herabeauty_official #노허슬 #스파이시누드글로스 #헤라 #hera</span>
+                    </span>
+                </article>
+                
+                <article class="sns5">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(2).jpg" alt="">
+                    <span class="text_box">
+                        <span>@zzin_beautylog
+                        </span>
+                        <span>HERA Sensual Spicy Nude Gloss💕 #내돈내산 저 헤라 덕후인거 알 분들은 다 아실거에요🥺 이번에 헤라 누드 글로스에 신규홋수 추가된거 아시나용😭!! [439 no hustle / 35,000 / 맑고 고급스러운 살몬 베이지 컬러] 이번 발색샷은 단독은 아니고 팜파스랑 같이 사용해줬는데요! 이 조합... 정말 대대대대찬성입니다....🖤 고급짐이 두 배가 되는 매직✨ 헤라 글로스는 처음 써봤는데 바르면 아주 약간의 플럼핑 효과와 함께 싸한 느낌이 올라오더라구요 처음에 좀 당황스러웠는데 바르다보면 익숙해지는 정도의 감각이에요! 매트만 고집했던 사람인데 왠지모르게 요즘 계속 글로스립이 눈에 들어오더라구요. 헤라 신규홋수 추가됐다는 말에 아묻따 구입완료 🤣 유리 패키지도 제품이랑 넘 잘어울리고 색감부터 네이밍까지 완벽한 것 같아요..😭 헤라 더 흥해라🖤 herabeauty_official #노허슬 #스파이시누드글로스 #헤라 #hera</span>
+                    </span>
+                </article>
+                
+                <article class="sns6">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(6).jpg" alt="">
+                    <span class="text_box">
+                        <span>@makeupbyelliechoi
+                        </span>
+                        <span>한국와서 제일 많이 산 브랜드는? 헤라에요! 그중에서 지금 잘쓰는 친구들 뽑아봤어요. 다 이쁜데 여러분.. 블러셔 꼭 사세요 🙋🏻‍♀️🙋🏻‍♀️🙋🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️ 1. herabeauty_official #란제리 2. 센슈얼 스파이시 누드밤 #카시스 3. #카시스 발색 4. 헤라 실키스테이 롱웨어 파운데이션 5. #실키스테이롱웨어 6. 디자이닝 블러셔 #이터널핑크</span>
+                    </span>
+                </article>
+                
+                <article class="sns7">
+                    <h3>.</h3>
+                    <img src="./image/sns_con(3).jpg" alt="">
+                    <span class="text_box">
+                        <span>@zzin_beautylog
+                        </span>
+                        <span>HERA Sensual Spicy Nude Gloss💕 #내돈내산 저 헤라 덕후인거 알 분들은 다 아실거에요🥺 이번에 헤라 누드 글로스에 신규홋수 추가된거 아시나용😭!! [439 no hustle / 35,000 / 맑고 고급스러운 살몬 베이지 컬러] 이번 발색샷은 단독은 아니고 팜파스랑 같이 사용해줬는데요! 이 조합... 정말 대대대대찬성입니다....🖤 고급짐이 두 배가 되는 매직✨ 헤라 글로스는 처음 써봤는데 바르면 아주 약간의 플럼핑 효과와 함께 싸한 느낌이 올라오더라구요 처음에 좀 당황스러웠는데 바르다보면 익숙해지는 정도의 감각이에요! 매트만 고집했던 사람인데 왠지모르게 요즘 계속 글로스립이 눈에 들어오더라구요. 헤라 신규홋수 추가됐다는 말에 아묻따 구입완료 🤣 유리 패키지도 제품이랑 넘 잘어울리고 색감부터 네이밍까지 완벽한 것 같아요..😭 헤라 더 흥해라🖤 herabeauty_official #노허슬 #스파이시누드글로스 #헤라 #hera</span>
+                    </span>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터영역 -->
+    <footer>
+        <div class="footer_box">
+            <div class="top_nav">
+                <nav>
+                    <ul>
+                        <li><a href="javascript:voide(0);" title="">서비스이용약관</a></li>
+                        <li><a href="javascript:voide(0);" title="">UGC이용약관</a></li>
+                        <li><a href="javascript:voide(0);" title="">개인정보처리방침</a></li>
+                        <li><a href="javascript:voide(0);" title="">영상정보처리방침</a></li>
+                        <li><a href="javascript:voide(0);" title="">뷰티포인트</a></li>
+                        <li><a href="javascript:voide(0);" title="">사이트맵</a></li>
+                    </ul>
+                </nav>
+                <div class="icon_box">
+                    <ul>
+                        <li><a href="javascript:voide(0);" title="페이스북"><img src="./image/sns_facebook_renew.png" alt=""></a></li>
+                        <li><a href="javascript:voide(0);" title="인스타그램"><img src="./image/sns_instagram_renew.png" alt=""></a></li>
+                        <li><a href="javascript:voide(0);" title="카카오"><img src="./image/sns_kakao_renew.png" alt=""></a></li>
+                        <li><a href="javascript:voide(0);" title="유튜브"><img src="./image/sns_youtube_renew.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="language">
+                language
+                <select>
+                    <option value="kor">KOR</option>
+                    <option value="en">EN</option>
+                    <option value="cn">CN</option>
+                </select>
+            </div>
+            
+            <address>
+                고객상담팀(수신자요금부담) 080-023-5454 (상담시간 월~금 : AM 09:00 ~ PM 06:00) <br>
+                © AMOREPACIFIC CORPORATION. All rights rese
+            </address>
+        </div>
+    </footer>
+
+    <!-- 탑버튼 -->
+    <div class="top_btn">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+
+    <!-- 스와이퍼스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+        // 메인슬라이드
+        var swiper = new Swiper(".m_slide", {
+        effect: 'fade',
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+
+        //BEST/NEW 슬라이드
+        var swiper = new Swiper(".bestnew_sldie",{
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides:true,
+        loop:true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+
+        // makeup 슬라이드
+        var swiper = new Swiper(".makeup_slide", {
+            slidesPerView: 3,
+            centeredSlides:true,
+            loop:true,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            }
+        });
+        </script>
+</body>
+</html>

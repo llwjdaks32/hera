@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 레이아웃 -->
+    <link rel="stylesheet" href="./css/layout.css">
+    <!-- 메인 -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- 베이스 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./script/jquery-3.6.1.js"></script>
+    <!-- 제이쿼리 ui -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- 스크롤 동작에 따른 애니메이션 스크립트 소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <!-- 스크립트 -->
+    <script src="./script/main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('header li').click(function(){
+            let i = $(this).index();
+            $('html, body').animate({scrollTop:$('main section').eq(i).offset().top-70},500,'swing');
+            return false;
+        })
+
+        $(window).scroll(function(){
+            if(this.scrollY>0){
+                // console.log(this.scrollY)
+                $('header').css({
+                    'box-shadow':'1px 4px 10px rgba(58, 58, 58, 0.379)',
+                    'background':'rgba(225,225,225,0.5)',
+                    'backdrop-filter' :'blur(15px)'
+                });
+            }else{
+                $('header').css({
+                    'box-shadow':'none',
+                    'background':'#fff'
+                });
+            };
+
+            if(this.scrollY >= $('.sec2').offset().top-70){
+            $('.sec2 .inner .skill dd span div').eq(0).animate({'width':'80%'},500);
+            $('.sec2 .inner .skill dd span div').eq(1).animate({'width':'80%'},550);
+            $('.sec2 .inner .skill dd span div').eq(2).animate({'width':'50%'},600);
+            $('.sec2 .inner .skill dd span div').eq(3).animate({'width':'60%'},650);
+            $('.sec2 .inner .skill dd span div').eq(4).animate({'width':'30%'},700);
+            $('.sec2 .inner .skill dd span div').eq(5).animate({'width':'70%'},750);
+            $('.sec2 .inner .skill dd span div').eq(6).animate({'width':'80%'},800);
+            $('.sec2 .inner .skill dd span div').eq(7).animate({'width':'80%'},850);
+            $('.sec2 .inner .skill dd span div').eq(8).animate({'width':'80%'},900);
+            };
+        });
+
+        const spyEl = document.querySelectorAll('.scroll-spy');
+
+        spyEl.forEach(function (spyEl) {
+
+        new ScrollMagic
+        .Scene({ //감시할 장면을 추가
+            triggerElement: spyEl,
+            triggerHook: .9 //화면의 80% 지점에서 동작
+        })
+        .setClassToggle(spyEl, 'show') //show클래스를 적용하거나 해제하기
+        .addTo(new ScrollMagic.Controller()); //컨트롤러에 장면을 할당한다
+        });
+        })
+    </script>
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="index.html" title="로고">
+                    <img src="./image/logo.svg" alt="">
+                </a>
+            </h1>
+            <div class="lnb">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass search_btn"></i>
+                        <input type="text" id="glass" placeholder="검색어를 입력하세요">
+                    </li>
+                    <li><a href="javascript:void(0);" title="매장찾기"><i class="fa-solid fa-location-dot"></i></a></li>
+                    <li><a href="login.html" title="로그인"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </div>
+
+            <nav class="gnb">
+            <ul >
+                <li><a href="javascript:void(0);" title="헤라스토리">헤라스토리</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub sub1">
+                            <dt><a href="#story" title="">브랜드소개</a></dt>
+                            <dt><a href="#acrew" title="">에어쿠르</a></dt>
+                            <dt><a href="#library" title="">캠페인 라이브러리</a></dt>
+                            <dd>&nbsp;</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#makeup" title="">메이크업</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">페이스</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">파운데이션</a></dd>
+                            <dd><a href="javascript:void(0);" title="">쿠션</a></dd>
+                            <dd><a href="javascript:void(0);" title="">베이스/프라이머</a></dd>
+                            <dd><a href="javascript:void(0);" title="">파우더/픽서</a></dd>
+                            <dd><a href="javascript:void(0);" title="">컨실러</a></dd>
+                            <dd><a href="javascript:void(0);" title="">브러쉬/어플리케이터</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">립</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">립스틱</a></dd>
+                            <dd><a href="javascript:void(0);" title="">틴트/글로스</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">아이</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아이섀도</a></dd>
+                            <dd><a href="javascript:void(0);" title="">마스카라</a></dd>
+                            <dd><a href="javascript:void(0);" title="">이이브로우</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아이라이너</a></dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#skin" title="">스킨케어</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품 라인</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 라인</a></dd>
+                            <dd><a href="javascript:void(0);" title="">셀 사이언스</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아쿠아볼릭</a></dd>
+                            <dd><a href="javascript:void(0);" title="">에이지 어웨이</a></dd>
+                            <dd><a href="javascript:void(0);" title="">시그니아</a></dd>
+                            <dd><a href="javascript:void(0);" title="">UV프로텍터</a></dd>
+                            <dd><a href="javascript:void(0);" title="">클렌징</a></dd>
+                            <dd><a href="javascript:void(0);" title="">옴므</a></dd>
+                            <dd><a href="javascript:void(0);" title="">하이드로-듀 플럼핑</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">피부고민</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 라인</a></dd>
+                            <dd><a href="javascript:void(0);" title="">수분/보습</a></dd>
+                            <dd><a href="javascript:void(0);" title="">브라이트닝</a></dd>
+                            <dd><a href="javascript:void(0);" title="">피부보호/차단</a></dd>
+                            <dd><a href="javascript:void(0);" title="">안티에이징</a></dd>
+                            <dd><a href="javascript:void(0);" title="">프리미엄 안티에이징</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품유형</a></dt>
+                            <dd><a href="javascript:void(0);" title="">스킨</a></dd>
+                            <dd><a href="javascript:void(0);" title="">로션</a></dd>
+                            <dd><a href="javascript:void(0);" title="">에센스/앰플</a></dd>
+                            <dd><a href="javascript:void(0);" title="">아이 케어</a></dd>
+                            <dd><a href="javascript:void(0);" title="">크림</a></dd>
+                            <dd><a href="javascript:void(0);" title="">마스크/스페셜케어</a></dd>
+                            <dd><a href="javascript:void(0);" title="">클렌징</a></dd>
+                            <dd><a href="javascript:void(0);" title="">프로텍션</a></dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#fragrance" title="">프래그런스</a>
+                    <div class="item_content">
+                    <div class="sub_wrap">
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품 라인</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">익셉셔널</a></dd>
+                            <dd><a href="javascript:void(0);" title="">지일/벨벳 나이트</a></dd>
+                        </dl>
+                        <dl class="sub">
+                            <dt><a href="javascript:void(0);" title="">제품유형</a></dt>
+                            <dd><a href="javascript:void(0);" title="">제품 전체</a></dd>
+                            <dd><a href="javascript:void(0);" title="">향수</a></dd>
+                            <dd><a href="javascript:void(0);" title="">바디</a></dd>
+                        </dl>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#hera" title="">#HERA</a></li>
+            </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <!-- 메인영역 -->
+    <main>
+        <section class="login">
+            <div class="login_wrap">
+                <ul>
+                    <li>로그인</li>
+                    <li>
+                        <input type="text" placeholder="아이디를 입력해주세요">
+                    </li>
+                    <li>
+                        <input type="password" placeholder="비밀번호를 입력해주세요">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id=""> 아이디 저장
+                    </li>
+                    <li>
+                        <div class="login_box">
+                            로그인
+                        </div> 
+                    </li>
+                    <li>
+                        <span>아이디찾기</span>
+                        <span>비밀번호 찾기</span>
+                        <span>회원가입</span>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="login_box face">
+                            페이스북 로그인
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="login_box naver">
+                            네이버 로그인
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="login_box kakao">
+                            카카오 로그인
+                        </div> 
+                    </li>
+                </dl>
+            </div>
+        </section>
+    </main>
+    <!-- 푸터영역 -->
+    <footer>
+        <div class="footer_box">
+            <div class="top_nav">
+                <nav>
+                    <ul>
+                        <li><a href="javascript:voide(0);" title="">서비스이용약관</a></li>
+                        <li><a href="javascript:voide(0);" title="">UGC이용약관</a></li>
+                        <li><a href="javascript:voide(0);" title="">개인정보처리방침</a></li>
+                        <li><a href="javascript:voide(0);" title="">영상정보처리방침</a></li>
+                        <li><a href="javascript:voide(0);" title="">뷰티포인트</a></li>
+                        <li><a href="javascript:voide(0);" title="">사이트맵</a></li>
+                    </ul>
+                </nav>
+                <div class="icon_box">
+                    <ul>
+                        <li><a href="javascript:voide(0);" title="페이스북"><img src="./image/sns_facebook_renew.png" alt=""></a></li>
+                        <li><a href="javascript:voide(0);" title="인스타그램"><img src="./image/sns_instagram_renew.png" alt=""></a></li>
+                        <li><a href="javascript:voide(0);" title="카카오"><img src="./image/sns_kakao_renew.png" alt=""></a></li>
+                        <li><a href="javascript:voide(0);" title="유튜브"><img src="./image/sns_youtube_renew.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="language">
+                language
+                <select>
+                    <option value="kor">KOR</option>
+                    <option value="en">EN</option>
+                    <option value="cn">CN</option>
+                </select>
+            </div>
+            
+            <address>
+                고객상담팀(수신자요금부담) 080-023-5454 (상담시간 월~금 : AM 09:00 ~ PM 06:00) <br>
+                © AMOREPACIFIC CORPORATION. All rights rese
+            </address>
+        </div>
+    </footer>
+</body>
+</html>

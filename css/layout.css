@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+.inner{
+    width: 1420px;
+    position: relative;
+    height: 100px;
+    margin: auto;
+}
+
+/* 헤더서식 */
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 100;
+}
+header.inner{
+    width: 1420px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    
+}
+header.inner{
+    height: 100px;
+}
+/* 로고 */
+header .inner h1{
+    position: absolute;
+    left: 0px;
+    width: 140px;
+    line-height: 100px;
+}
+
+/* lnb */
+.lnb ul{
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
+    right: 0px;
+    display: flex;
+}
+.lnb ul li{
+    padding: 0px 20px;
+}
+.lnb ul li i{
+    font-size: 20px;
+}
+#glass{
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    width: 0px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    top: -7px;
+    right: 160px;
+    z-index: -1;
+    padding-left: 15px;
+}
+.glassed{
+    width: 100px;
+}
+
+/* gnb */
+.gnb{
+}
+.gnb>ul{
+    display: flex;
+    justify-content: center;
+}
+.gnb>ul>li{
+    
+}
+.gnb>ul>li>a{
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+    line-height: 100px;
+    padding: 0px 30px;
+    position: relative;
+}
+.gnb>ul>li a::before{
+    content: "";
+    background-color: #FF6982;
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+.gnb>ul>li a:hover{
+    color: #FF6982;
+}
+.gnb>ul>li>a:hover::before{
+    transform: scaleX(1);
+}
+.gnb>ul>li:hover .item_content{
+    display: block;
+}
+
+/* sub */
+.item_content{
+    display: none;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    background-color:#fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    transition: 0.3s;
+}
+.sub_wrap{
+    width: 1420px;
+    margin: 0px auto;
+    position: relative;
+    display: flex;
+    padding-left: 520px;
+}
+.sub{
+    padding: 30px 0px 100px 100px;
+}
+.sub1{
+    display: flex;
+}
+.sub dt, dd{
+    width: 220px;
+}
+.sub dt{
+    justify-content: left;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    font-weight: 600;
+}
+.sub dt::before{
+    content: "";
+    background-color: #FF6982;
+    width: 0%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.sub dt:hover::before{
+    width: 50%;
+}
+.sub dd{
+    font-size: 12px;
+    padding: 15px 0px 0px;
+}
+
+
+/* 푸터 */
+footer{
+    width: 100%;
+    margin:0px auto;
+    height: 330px;
+    background-color: #333;
+}
+.footer_box{
+    width: 1420px;
+    height: 100%;
+    margin:0px auto;
+}
+.top_nav{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-bottom:1px solid #ccc ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_nav nav>ul{
+    display: flex;
+}
+.top_nav nav>ul li{
+    padding-right: 40px;
+    
+}
+.top_nav nav>ul li:hover a{
+    color:#FF6982;
+    text-decoration: underline;
+}
+.top_nav nav>ul li a{
+    color: #ccc;
+    transition: 0.2s;
+    font-size: 14px;
+}
+.language{
+    margin-bottom: 30px;
+    display: inline-block;
+    color: #ccc;
+    padding: 7px 80px 7px 15px;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+}
+.language select{
+    font-size: 16px;
+    background-color: #333;
+    color: #ccc;
+    border: none;
+    padding-left: 20px;
+}
+.icon_box{}
+.icon_box ul{
+    display:flex;
+    justify-content: right;
+}
+.icon_box ul li{
+    padding-left: 20px;
+}
+.icon_box img{
+    width: 30px;
+}
+address{
+    color: #ccc;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.top_btn{
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background-color: rgba(51, 51, 51, 0.288);
+    padding: 15px;
+    border-radius: 50%;
+    transition: 0.2s;
+    border: 1px solid #fff;
+}
+.top_btn i{
+    color: #fff;
+    font-size: 20px;
+}
+.top_btn:hover{
+    transform: scale(1.2);
+    background-color: #FF6982;
+}
