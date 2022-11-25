@@ -385,7 +385,7 @@ h2::before{
 
 /* 스킨 */
 .skin{
-    background-image:url(../02이미지/skincaremain.jpg);
+    background-image:url(../image/skincaremain.jpg);
 }
 .skin_box{
     margin: 0px auto;
