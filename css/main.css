@@ -5,10 +5,6 @@ h2{
     display: inline-block;
     position: relative;
 }
-section>h2:first-child{display: none;}
-article>h3{
-    display: none;
-}
 h2::after{
     content: "";
     width: 60%;
